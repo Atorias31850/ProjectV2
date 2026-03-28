@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ระบบการเรียนรู้ Git และ GitHub สำหรับนักพัฒนา</title>
+    <title>GitDev.TH - ระบบการเรียนรู้ Git และ GitHub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="stars-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
 
     <header>
         <div class="logo">GitDev.TH</div>
@@ -28,50 +34,54 @@
         <h2>เนื้อหาบทเรียน (Course Syllabus)</h2>
         <div class="grid">
             
-            <div class="card">
+            <a href="lesson1.html" class="card">
                 <h3 style="color: #ff7f50;">บทที่ 1: ปัญหาของการจัดการไฟล์แบบเดิม</h3>
-                <p>ศึกษาข้อจำกัดของการจัดการไฟล์โดยไม่ใช้ระบบควบคุมเวอร์ชัน และทำความเข้าใจความสำคัญของ Git ในการแก้ปัญหาการสูญหายของข้อมูลและการทำงานซ้ำซ้อน</p>
+                <p>ศึกษาข้อจำกัดของการจัดการไฟล์โดยไม่ใช้ระบบควบคุมเวอร์ชัน และทำความเข้าใจความสำคัญของ Git ในการแก้ปัญหาการสูญหายของข้อมูล</p>
                 <div class="terminal">~ % rm -rf Project_Final_v99</div>
-                <br>
-                <a href="lesson1.html" style="color: #58A6FF; text-decoration: underline;">อ่านเนื้อหาบทที่ 1 คลิกที่นี่</a>
-            </div>
+                <div class="click-hint">คลิกเพื่อเข้าสู่บทเรียน ➔</div>
+            </a>
 
-            <div class="card">
+            <a href="#" class="card">
                 <h3 style="color: #ff7f50;">บทที่ 2: โครงสร้างและการทำงานของ Git</h3>
-                <p>ทำความเข้าใจสถาปัตยกรรมของ Git (Working Directory, Staging Area, Repository) และการใช้คำสั่งพื้นฐานในการเริ่มต้นโครงการและบันทึกการเปลี่ยนแปลง (Commit)</p>
+                <p>ทำความเข้าใจสถาปัตยกรรมของ Git (Working Directory, Staging Area, Repository) และการใช้คำสั่งพื้นฐานในการบันทึกการเปลี่ยนแปลง (Commit)</p>
                 <div class="terminal">~ % git add .<br>~ % git commit -m "feat: login system"</div>
-            </div>
+                <div class="click-hint">คลิกเพื่อเข้าสู่บทเรียน ➔</div>
+            </a>
 
-            <div class="card">
+            <a href="#" class="card">
                 <h3 style="color: #58A6FF;">บทที่ 3: การจัดการสาขา (Branching)</h3>
-                <p>ศึกษาวิธีการแยกสาขา (Branch) เพื่อพัฒนาส่วนย่อยของโปรแกรม (Feature) โดยไม่กระทบกับระบบหลัก และหลักการทำงานร่วมกันเป็นทีมอย่างมีประสิทธิภาพ</p>
+                <p>ศึกษาวิธีการแยกสาขา (Branch) เพื่อพัฒนาส่วนย่อยของโปรแกรม (Feature) โดยไม่กระทบกับระบบหลัก และการทำงานเป็นทีม</p>
                 <div class="terminal">~ % git branch feature-login<br>~ % git checkout feature-login</div>
-            </div>
+                <div class="click-hint">คลิกเพื่อเข้าสู่บทเรียน ➔</div>
+            </a>
 
-            <div class="card">
+            <a href="#" class="card">
                 <h3 style="color: #58A6FF;">บทที่ 4: การรวมรหัสต้นฉบับ (Merge & PR)</h3>
-                <p>เรียนรู้กระบวนการ Pull Request เพื่อตรวจสอบความถูกต้องของรหัสต้นฉบับก่อนทำการรวม (Merge) และวิธีการแก้ไขข้อขัดแย้งของข้อมูล (Merge Conflict)</p>
+                <p>เรียนรู้กระบวนการ Pull Request เพื่อตรวจสอบความถูกต้องของรหัสต้นฉบับก่อนทำการรวม (Merge) และวิธีการแก้ไข Conflict</p>
                 <div class="terminal">~ % git merge feature-login</div>
-            </div>
+                <div class="click-hint">คลิกเพื่อเข้าสู่บทเรียน ➔</div>
+            </a>
 
-            <div class="card">
+            <a href="#" class="card">
                 <h3 style="color: #2EA043;">บทที่ 5: การประยุกต์ใช้แพลตฟอร์ม GitHub</h3>
-                <p>ศึกษาการเชื่อมต่อพื้นที่เก็บข้อมูลในเครื่อง (Local Repository) เข้ากับระบบคลาวด์ (Remote Repository) เพื่อการสำรองข้อมูลและการนำเสนอผลงาน (Portfolio)</p>
+                <p>ศึกษาการเชื่อมต่อพื้นที่เก็บข้อมูลในเครื่อง (Local Repository) เข้ากับระบบคลาวด์ (Remote Repository) เพื่อการสำรองข้อมูล</p>
                 <div class="terminal">~ % git remote add origin [URL]</div>
-            </div>
+                <div class="click-hint">คลิกเพื่อเข้าสู่บทเรียน ➔</div>
+            </a>
 
-            <div class="card">
+            <a href="#" class="card">
                 <h3 style="color: #2EA043;">บทที่ 6: ภาคปฏิบัติและสรุปคำสั่ง (Workshop)</h3>
-                <p>ฝึกปฏิบัติการใช้งานจริงผ่านสถานการณ์จำลอง ตั้งแต่การนำเข้า (Pull) และส่งออกข้อมูล (Push) พร้อมตารางสรุปคำสั่งที่จำเป็นสำหรับการปฏิบัติงาน (Cheat Sheet)</p>
+                <p>ฝึกปฏิบัติการใช้งานจริงผ่านสถานการณ์จำลอง ตั้งแต่การนำเข้า (Pull) และส่งออกข้อมูล (Push) พร้อมตารางสรุปคำสั่ง</p>
                 <div class="terminal">~ % git push -u origin main<br>~ % git pull origin main</div>
-            </div>
+                <div class="click-hint">คลิกเพื่อเข้าสู่บทเรียน ➔</div>
+            </a>
 
         </div>
     </div>
 
-    <footer style="text-align: center; padding: 40px; border-top: 1px solid #30363D; margin-top: 40px; color: #8B949E; background-color: #0D1117;">
+    <footer>
         <p>© 2026 GitDev.TH - จัดทำโดยนักศึกษา ปวช./ปวส. สาขาเทคโนโลยีสารสนเทศ</p>
-        <p style="font-size: 14px;">โครงงานนี้เป็นส่วนหนึ่งของการศึกษาและพัฒนาสื่อการเรียนรู้</p>
+        <p style="font-size: 14px; color: #8B949E;">โครงงานนี้เป็นส่วนหนึ่งของการศึกษาและพัฒนาสื่อการเรียนรู้</p>
     </footer>
 
 </body>

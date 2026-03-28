@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบการเรียนรู้ Git และ GitHub สำหรับนักพัฒนา</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">GitDev.TH</div>
+        <div class="nav-links">
+            <a href="#">หน้าแรก</a>
+            <a href="#">เข้าสู่บทเรียน</a>
+            <a href="#">สรุปคำสั่ง</a>
+            <a href="#">ผู้จัดทำ</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1 style="color: #58A6FF;">ยกระดับทักษะการพัฒนาระบบ<br><span style="color: #FFFFFF;">ด้วย Git และ GitHub อย่างมืออาชีพ</span></h1>
+        <p>ก้าวข้ามข้อจำกัดในการจัดการไฟล์แบบดั้งเดิม เรียนรู้ระบบควบคุมเวอร์ชัน (Version Control System) ตั้งแต่ระดับพื้นฐานจนถึงสถาปัตยกรรมการทำงานร่วมกัน (Gitflow) มาตรฐานอุตสาหกรรมซอฟต์แวร์</p>
+        <a href="#" class="btn-primary">▶ เริ่มต้นเข้าสู่บทเรียน</a>
+    </div>
+
+    <div class="content-section">
+        <h2>เนื้อหาบทเรียน (Course Syllabus)</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <h3 style="color: #ff7f50;">บทที่ 1: ปัญหาของการจัดการไฟล์แบบเดิม</h3>
+                <p>ศึกษาข้อจำกัดของการจัดการไฟล์โดยไม่ใช้ระบบควบคุมเวอร์ชัน และทำความเข้าใจความสำคัญของ Git ในการแก้ปัญหาการสูญหายของข้อมูลและการทำงานซ้ำซ้อน</p>
+                <div class="terminal">~ % rm -rf Project_Final_v99</div>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #ff7f50;">บทที่ 2: โครงสร้างและการทำงานของ Git</h3>
+                <p>ทำความเข้าใจสถาปัตยกรรมของ Git (Working Directory, Staging Area, Repository) และการใช้คำสั่งพื้นฐานในการเริ่มต้นโครงการและบันทึกการเปลี่ยนแปลง (Commit)</p>
+                <div class="terminal">~ % git add .<br>~ % git commit -m "feat: login system"</div>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #58A6FF;">บทที่ 3: การจัดการสาขา (Branching)</h3>
+                <p>ศึกษาวิธีการแยกสาขา (Branch) เพื่อพัฒนาส่วนย่อยของโปรแกรม (Feature) โดยไม่กระทบกับระบบหลัก และหลักการทำงานร่วมกันเป็นทีมอย่างมีประสิทธิภาพ</p>
+                <div class="terminal">~ % git branch feature-login<br>~ % git checkout feature-login</div>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #58A6FF;">บทที่ 4: การรวมรหัสต้นฉบับ (Merge & PR)</h3>
+                <p>เรียนรู้กระบวนการ Pull Request เพื่อตรวจสอบความถูกต้องของรหัสต้นฉบับก่อนทำการรวม (Merge) และวิธีการแก้ไขข้อขัดแย้งของข้อมูล (Merge Conflict)</p>
+                <div class="terminal">~ % git merge feature-login</div>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #2EA043;">บทที่ 5: การประยุกต์ใช้แพลตฟอร์ม GitHub</h3>
+                <p>ศึกษาการเชื่อมต่อพื้นที่เก็บข้อมูลในเครื่อง (Local Repository) เข้ากับระบบคลาวด์ (Remote Repository) เพื่อการสำรองข้อมูลและการนำเสนอผลงาน (Portfolio)</p>
+                <div class="terminal">~ % git remote add origin [URL]</div>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #2EA043;">บทที่ 6: ภาคปฏิบัติและสรุปคำสั่ง (Workshop)</h3>
+                <p>ฝึกปฏิบัติการใช้งานจริงผ่านสถานการณ์จำลอง ตั้งแต่การนำเข้า (Pull) และส่งออกข้อมูล (Push) พร้อมตารางสรุปคำสั่งที่จำเป็นสำหรับการปฏิบัติงาน (Cheat Sheet)</p>
+                <div class="terminal">~ % git push -u origin main<br>~ % git pull origin main</div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid #30363D; margin-top: 40px; color: #8B949E; background-color: #0D1117;">
+        <p>© 2026 GitDev.TH - จัดทำโดยนักศึกษา ปวช./ปวส. สาขาเทคโนโลยีสารสนเทศ</p>
+        <p style="font-size: 14px;">โครงงานนี้เป็นส่วนหนึ่งของการศึกษาและพัฒนาสื่อการเรียนรู้</p>
+    </footer>
+
+</body>
+</html>

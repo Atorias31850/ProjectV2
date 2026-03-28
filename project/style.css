@@ -1,0 +1,140 @@
+/* =========================================
+   ไฟล์ CSS สำหรับระบบการเรียนรู้ Git & GitHub
+   ธีม: Dark Mode (สไตล์นักพัฒนาซอฟต์แวร์)
+   ========================================= */
+
+/* 1. ตั้งค่าพื้นฐานสำหรับทั้งเว็บไซต์ (Global Styles) */
+body {
+    background-color: #0D1117; /* พื้นหลังสีเทาดำสไตล์ GitHub */
+    color: #C9D1D9;            /* สีข้อความหลักเทาอ่อนเพื่อถนอมสายตา */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;                 /* ลบระยะขอบเริ่มต้นของเบราว์เซอร์ */
+    padding: 0;                
+    line-height: 1.6;          /* ระยะห่างระหว่างบรรทัดให้อ่านง่าย */
+}
+
+/* 2. ส่วนแถบนำทางด้านบน (Header / Navigation Bar) */
+header {
+    background-color: #161B22; 
+    padding: 20px 40px;        
+    display: flex;             /* จัดเรียงองค์ประกอบเป็นแนวนอน */
+    justify-content: space-between; /* แยกโลโก้ไว้ซ้าย เมนูไว้ขวา */
+    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
+    border-bottom: 1px solid #30363D; /* เส้นแบ่งด้านล่าง */
+}
+
+.logo { 
+    font-size: 24px;   
+    font-weight: bold; 
+    color: #FFFFFF;    
+}
+
+.nav-links a { 
+    color: #C9D1D9;           
+    text-decoration: none;    /* นำเส้นใต้ลิงก์ออก */
+    margin-left: 20px;        /* ระยะห่างระหว่างเมนู */
+    transition: color 0.3s ease;   /* เอฟเฟกต์เปลี่ยนสีอย่างนุ่มนวล */
+}
+
+.nav-links a:hover { 
+    color: #58A6FF;           /* เปลี่ยนเป็นสีฟ้าเมื่อนำเมาส์ไปชี้ */
+}
+
+/* 3. ส่วนหัวเรื่องหลัก (Hero Section) */
+.hero {
+    text-align: center; 
+    padding: 100px 20px; /* พื้นที่ว่างบน-ล่างให้ดูโปร่ง */
+}
+
+.hero h1 { 
+    font-size: 48px;     
+    color: #FFFFFF;      
+    margin-bottom: 15px; 
+    line-height: 1.3;    
+}
+
+.hero p { 
+    font-size: 18px;     
+    color: #8B949E;      
+    max-width: 700px;    /* จำกัดความกว้างไม่ให้ข้อความยาวเกินไป */
+    margin: 0 auto 40px; /* จัดกึ่งกลาง */
+}
+
+/* 4. ปุ่มกดหลัก (Primary Call-to-Action Button) */
+.btn-primary {
+    background-color: #238636; /* สีเขียวสไตล์ปุ่ม Commit */
+    color: #FFFFFF;              
+    padding: 15px 35px;        
+    text-decoration: none;     
+    border-radius: 8px;        /* มุมโค้งมน */
+    font-size: 18px;           
+    font-weight: bold;         
+    display: inline-block;     
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.btn-primary:hover { 
+    background-color: #2EA043; /* สีสว่างขึ้นเมื่อชี้เมาส์ */
+    transform: scale(1.05);    /* ขยายขนาดขึ้นเล็กน้อยสร้างการโต้ตอบ */
+}
+
+/* 5. ส่วนห่อหุ้มเนื้อหาบทเรียน (Content Section) */
+.content-section {
+    padding: 40px 20px; 
+    max-width: 1100px;  /* กำหนดความกว้างสูงสุดของเนื้อหา */
+    margin: 0 auto;     /* จัดกึ่งกลางหน้าจอ */
+}
+
+.content-section h2 { 
+    text-align: center;  
+    color: #FFFFFF;      
+    margin-bottom: 50px; 
+    font-size: 32px;     
+}
+
+/* 6. ระบบตารางสำหรับจัดเรียงบทเรียน (Grid Layout) */
+.grid {
+    display: grid; 
+    /* สร้างคอลัมน์อัตโนมัติ ขนาดขั้นต่ำ 320px และขยายได้สูงสุด 1 ส่วน (1fr) */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 25px; /* ระยะห่างระหว่างการ์ดบทเรียน */
+}
+
+/* 7. การ์ดแสดงเนื้อหาบทเรียน (Course Cards) */
+.card {
+    background-color: #161B22;  
+    border: 1px solid #30363D;  
+    border-radius: 12px;        
+    padding: 30px;              
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover { 
+    transform: translateY(-8px); /* การ์ดลอยขึ้นเมื่อชี้เมาส์ */
+    border-color: #58A6FF;       /* เปลี่ยนสีกรอบเป็นสีฟ้า */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* เพิ่มเงาให้ดูมีมิติ */
+}
+
+.card h3 { 
+    margin-top: 0;   
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card p { 
+    color: #8B949E;  
+    font-size: 15px; 
+    line-height: 1.6;
+}
+
+/* 8. กล่องจำลองบรรทัดคำสั่ง (Terminal Snippet) */
+.terminal {
+    background-color: #010409; 
+    color: #E6EDF3;            
+    font-family: 'Courier New', Courier, monospace; /* ฟอนต์แบบ Monospace สำหรับโค้ด */
+    padding: 12px 15px;             
+    border-radius: 6px;        
+    margin-top: 20px;          
+    border: 1px solid #30363D; 
+    font-size: 14px;
+}

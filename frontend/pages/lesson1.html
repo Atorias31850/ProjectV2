@@ -10,28 +10,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-bgDark text-textLight min-h-screen flex flex-col">
-    <header class="site-header sticky top-0 z-50">
+    <nav class="border-b border-borderDark bg-bgDark/90 sticky top-0 backdrop-blur-md z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="logo flex items-center gap-2">
+            <a href="home.html" class="text-white text-2xl font-bold flex items-center gap-2 hover:text-[#58A6FF] transition">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                <span class="text-white text-2xl font-bold">GitVisual.TH</span>
-            </div>
-            <nav class="hidden md:flex space-x-6 text-sm nav-links">
-                <a href="home.html" class="text-[#58A6FF] font-medium">หน้าแรก</a>
-                <a href="lesson1.html" class="hover:text-[#58A6FF] transition">บทเรียน</a>
+                GitVisual.TH
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm">
+                <a href="home.html" class="hover:text-[#58A6FF] transition">หน้าแรก</a>
+                <a href="lesson1.html" class="text-[#58A6FF] font-medium">บทเรียน</a>
                 <a href="cheatsheet.html" class="hover:text-[#58A6FF] transition">คู่มือคำสั่ง</a>
                 <a href="#" class="hover:text-[#58A6FF] transition">ผู้จัดทำ</a>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <main class="max-w-5xl mx-auto w-full px-6 py-12 flex-grow space-y-20">
 
         <section class="bg-[#161B22] border border-borderDark p-8 rounded-2xl shadow-lg flex flex-col md:flex-row items-center gap-8">
             <div class="w-full md:w-2/3 space-y-3">
+                <div class="inline-block bg-orange-500/20 text-orange-400 px-4 py-1.5 rounded-full text-sm font-semibold mb-2 border border-orange-500/30">
+                    บทเรียนที่ 1 (Chapter 1)
+                </div>
                 <h3 class="text-2xl font-bold text-[#58A6FF]">สิ่งที่เราจะเรียนรู้ในบทนี้</h3>
                 <p class="text-[#8B949E] text-sm leading-relaxed">
-                    ก่อนที่จะดำดิ่งสู่คำสั่ง Git เราต้องทำความเข้าใจเจ็บปวดของการจัดการไฟล์แบบเดิมๆ เสียก่อน บทนี้จะพาคุณไปเจาะลึก 4 ปัญหาคลาสสิกที่นักพัฒนาทุกคนต้องเจอเมื่อไม่ได้ใช้ระบบ Version Control เพื่อให้คุณเห็นคุณค่าและจำเป็นของ Git อย่างแท้จริง
+                    ก่อนที่จะดำดิ่งสู่คำสั่ง Git เราต้องทำความเข้าใจเจ็บปวดของการจัดการไฟล์แบบเดิมๆ เสียก่อน บทนี้จะพาคุณไปเจาะลึก 4 ปัญหาคลาสสิกที่นักพัฒนาทุกคนต้องเจอเมื่อไม่ได้ใช้ระบบ Version Control เพื่อให้คุณเห็นคุณค่าและความจำเป็นของ Git อย่างแท้จริง
                 </p>
                 <ul class="text-xs text-[#C9D1D9] list-disc list-inside space-y-1 pt-2 columns-2">
                     <li>ความวุ่นวายของการก๊อปปี้ไฟล์</li>
@@ -45,7 +48,7 @@
         <section class="flex flex-col md:flex-row items-center gap-10 hover-scale">
             <div class="w-full md:w-1/2 rounded-2xl overflow-hidden border border-borderDark shadow-2xl relative group">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
-                <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop" alt="ปัญหาการก๊อปปี้ไฟล์" class="w-full h-[300px] object-cover">
+                <img src="../assets/les1.1.png" alt="ปัญหาการสำรองไฟล์ซ้ำและการจัดเก็บ" class="w-full h-[300px] object-cover">
             </div>
             <div class="w-full md:w-1/2 space-y-4">
                 <div class="inline-block bg-[#F0883E]/20 text-[#F0883E] px-3 py-1 rounded-full text-sm font-semibold mb-2">ปัญหาที่ 1</div>
@@ -67,9 +70,9 @@
             </div>
             <div class="w-full md:w-1/2 space-y-4">
                 <div class="inline-block bg-[#F0883E]/20 text-[#F0883E] px-3 py-1 rounded-full text-sm font-semibold mb-2">ปัญหาที่ 2</div>
-                <h2 class="text-2xl font-bold text-white">ข้อจำกัดในการทำงานร่วมกันเป็นทีม (Collaboration)</h2>
+                <h2 class="text-2xl font-bold text-white">ข้อจำกัดในการทำงานร่วมกันเป็นทีม</h2>
                 <p class="text-[#8B949E] leading-relaxed">
-                    เมื่อต้องทำงานร่วมกันหลายคน การแบ่งงานและนำไฟล์มารวมกันด้วยวิธีการส่งผ่าน Flash Drive หรือแอปพลิเคชันสนทนา มักก่อให้เกิดปัญหา <span class="text-white font-semibold">"การเขียนข้อมูลทับกัน" (Overwriting)</span>
+                    เมื่อต้องทำงานร่วมกันหลายคน การแบ่งงานและนำไฟล์มารวมกันด้วยวิธีการส่งผ่าน Flash Drive หรือแอปพลิเคชันสนทนา มักก่อให้เกิดปัญหา <span class="text-white font-semibold">"การเขียนข้อมูลทับกัน"</span>
                 </p>
                 <div class="bg-dangerBg border-l-4 border-dangerText p-4 rounded-r-lg mt-4">
                     <strong class="text-dangerText block mb-1">ปัญหาที่พบ:</strong>
@@ -85,13 +88,13 @@
             </div>
             <div class="w-full md:w-1/2 space-y-4">
                 <div class="inline-block bg-[#F0883E]/20 text-[#F0883E] px-3 py-1 rounded-full text-sm font-semibold mb-2">ปัญหาที่ 3</div>
-                <h2 class="text-2xl font-bold text-white">ขาดประวัติการแก้ไขและย้อนกลับไม่ได้ (No History & Rollback)</h2>
+                <h2 class="text-2xl font-bold text-white">ขาดประวัติการแก้ไขและย้อนกลับไม่ได้</h2>
                 <p class="text-[#8B949E] leading-relaxed">
-                    ในบางครั้งโปรแกรมที่เราเขียนอาจทำงานผิดพลาด (Bug) หากเราใช้วิธีเซฟทับไฟล์เดิมไปเรื่อยๆ เราจะไม่มีทางรู้เลยว่า <span class="text-white font-semibold">"ใครเป็นคนแก้ แก้บรรทัดไหน และแก้ไปเมื่อไหร่"</span>
+                    ในบางครั้งโปรแกรมที่เราเขียนอาจทำงานผิดพลาด หากเราใช้วิธีเซฟทับไฟล์เดิมไปเรื่อยๆ เราจะไม่มีทางรู้เลยว่า <span class="text-white font-semibold">"ใครเป็นคนแก้ แก้บรรทัดไหน และแก้ไปเมื่อไหร่"</span>
                 </p>
                 <div class="bg-dangerBg border-l-4 border-dangerText p-4 rounded-r-lg mt-4">
                     <strong class="text-dangerText block mb-1">ปัญหาที่พบ:</strong>
-                    <p class="text-sm text-[#C9D1D9]">เมื่อระบบพัง การจะย้อนกลับ (Rollback) ไปยังเวอร์ชันก่อนหน้าที่ยังใช้งานได้ปกติจะทำได้ยากมาก หรือแทบเป็นไปไม่ได้เลยหากไม่ได้คัดลอกไฟล์เก็บไว้</p>
+                    <p class="text-sm text-[#C9D1D9]">เมื่อระบบพัง การจะย้อนกลับไปยังเวอร์ชันก่อนหน้าที่ยังใช้งานได้ปกติจะทำได้ยากมาก หรือแทบเป็นไปไม่ได้เลยหากไม่ได้คัดลอกไฟล์เก็บไว้</p>
                 </div>
             </div>
         </section>
@@ -99,13 +102,13 @@
         <section class="flex flex-col md:flex-row-reverse items-center gap-10 hover-scale">
             <div class="w-full md:w-1/2 rounded-2xl overflow-hidden border border-borderDark shadow-2xl relative group">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
-                <img src="https://images.unsplash.com/photo-1506452812517-0e620db4027f?q=80&w=800&auto=format&fit=crop" alt="ความกลัวที่จะแก้ไขโค้ด" class="w-full h-[300px] object-cover">
+                <img src="../assets/p4.png" alt="ความกลัวที่จะลองแก้โค้ด" class="w-full h-[300px] object-cover">
             </div>
             <div class="w-full md:w-1/2 space-y-4">
                 <div class="inline-block bg-[#F0883E]/20 text-[#F0883E] px-3 py-1 rounded-full text-sm font-semibold mb-2">ปัญหาที่ 4</div>
-                <h2 class="text-2xl font-bold text-white">ความกลัวที่จะทดลองสิ่งใหม่ (Fear of Breaking Things)</h2>
+                <h2 class="text-2xl font-bold text-white">ความกลัวที่จะทดลองสิ่งใหม่</h2>
                 <p class="text-[#8B949E] leading-relaxed">
-                    เมื่อโค้ดหลักทำงานได้สมบูรณ์แล้ว นักพัฒนามักจะไม่กล้าเขียนฟีเจอร์ใหม่หรือทดลองปรับปรุงโครงสร้างโค้ด (Refactoring) เพราะกลัวว่าถ้าทำพลาดแล้วจะส่งผลกระทบให้โปรเจกต์ทั้งหมดใช้งานไม่ได้
+                    เมื่อโค้ดหลักทำงานได้สมบูรณ์แล้ว นักพัฒนามักจะไม่กล้าเขียนฟีเจอร์ใหม่หรือทดลองปรับปรุงโครงสร้างโค้ด เพราะกลัวว่าถ้าทำพลาดแล้วจะส่งผลกระทบให้โปรเจกต์ทั้งหมดใช้งานไม่ได้
                 </p>
                 <div class="bg-dangerBg border-l-4 border-dangerText p-4 rounded-r-lg mt-4">
                     <strong class="text-dangerText block mb-1">ปัญหาที่พบ:</strong>
@@ -118,7 +121,7 @@
             <svg class="absolute -bottom-10 -right-10 w-40 h-40 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M2.646 1.146l20.208 20.208a1.5 1.5 0 010 2.122l-10 10a1.5 1.5 0 01-2.122 0L2.646 23.646a1.5 1.5 0 010-2.122l10-10a1.5 1.5 0 012.122 0l10 10a1.5 1.5 0 010 2.122L3.646 22.146a1.5 1.5 0 01-2.122 0L2.646 1.146zM12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm1 14h-2v-6h2v6zm0-8h-2V6h2v2z"/></svg>
             <h3 class="text-2xl font-bold text-[#58A6FF] mb-4 relative z-10">ทางออกของปัญหาคืออะไร?</h3>
             <p class="text-[#8B949E] max-w-3xl mx-auto relative z-10">
-                ปัญหาทั้งหมดที่กล่าวมานี้ สามารถแก้ไขได้อย่างหมดจดด้วยการใช้งาน <strong class="text-white">ระบบควบคุมเวอร์ชัน (Version Control System)</strong> อย่างเช่น <strong class="text-white">Git</strong> ซึ่งเปรียบเสมือนไทม์แมชชีนและระบบจัดการไฟล์อัจฉริยะสำหรับนักพัฒนา
+                ปัญหาทั้งหมดที่กล่าวมานี้ สามารถแก้ไขได้อย่างหมดจดด้วยการใช้งาน <strong class="text-white">ระบบควบคุมเวอร์ชัน</strong> อย่างเช่น <strong class="text-white">Git</strong> ซึ่งเปรียบเสมือนไทม์แมชชีนและระบบจัดการไฟล์อัจฉริยะสำหรับนักพัฒนา
             </p>
         </section>
 
@@ -126,7 +129,7 @@
             <a href="home.html" class="inline-flex items-center justify-center rounded-full border border-[#58A6FF] px-6 py-3 text-sm font-semibold text-[#58A6FF] transition hover:bg-[#58A6FF]/10">
                 กลับหน้าหลัก
             </a>
-            <a href="cheatsheet.html" class="inline-flex items-center justify-center rounded-full bg-[#58A6FF] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#3E8CEC]">
+            <a href="lesson2.html" class="inline-flex items-center justify-center rounded-full bg-[#58A6FF] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#3E8CEC]">
                 หน้าถัดไป
             </a>
         </div>

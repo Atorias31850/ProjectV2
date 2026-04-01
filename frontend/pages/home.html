@@ -13,12 +13,12 @@
 
     <nav class="border-b border-borderDark bg-bgDark/90 sticky top-0 backdrop-blur-md z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-white text-2xl font-bold flex items-center gap-2">
+            <a href="home.html" class="text-white text-2xl font-bold flex items-center gap-2 hover:text-[#58A6FF] transition">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                 GitVisual.TH
-            </div>
+            </a>
             <div class="hidden md:flex space-x-6 text-sm">
-                <a href="#" class="text-[#58A6FF] font-medium">หน้าแรก</a>
+                <a href="home.html" class="text-[#58A6FF] font-medium">หน้าแรก</a>
                 <a href="lesson1.html" class="hover:text-[#58A6FF] transition">บทเรียน</a>
                 <a href="cheatsheet.html" class="hover:text-[#58A6FF] transition">คู่มือคำสั่ง</a>
                 <a href="#" class="hover:text-[#58A6FF] transition">ผู้จัดทำ</a>
@@ -52,21 +52,32 @@
                 <p class="text-[#8B949E] text-sm">ข้อจำกัดของการจัดการไฟล์แบบดั้งเดิม และการเริ่มต้นใช้งาน Git สำหรับบันทึกประวัติการเปลี่ยนแปลง (Init, Add, Commit)</p>
             </a>
 
-            <a href="#" class="block bg-cardDark border border-borderDark rounded-xl p-6 card-transition card-blue">
-                <svg class="w-8 h-8 mb-4 text-[#58A6FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5m0 2l-2 2m2-2l2 2m4 10a2 2 0 110-4 2 2 0 010 4zM6 19a2 2 0 110-4 2 2 0 010 4z"></path></svg>
-                <h3 class="text-white text-xl font-semibold mb-2">2. การบริหารจัดการสาขา (Branching)</h3>
-                <p class="text-[#8B949E] text-sm">หลักการแยกพื้นที่พัฒนา (Branch) เพื่อลดข้อผิดพลาด และแนวทางการปฏิบัติงานร่วมกันเป็นทีมอย่างปลอดภัย</p>
+            <a href="lesson2.html" class="block bg-cardDark border border-borderDark rounded-xl p-6 card-transition card-blue">
+                <svg class="w-8 h-8 mb-4 text-[#58A6FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-3-3m3 3l3-3M4 19h16"/></svg>
+                <h3 class="text-white text-xl font-semibold mb-2">2. การติดตั้ง Git และสมัคร GitHub</h3>
+                <p class="text-[#8B949E] text-sm">แนะนำการติดตั้ง Git บนเครื่อง และวิธีสมัครบัญชี GitHub เพื่อเริ่มใช้งานระบบควบคุมเวอร์ชันบนคลาวด์</p>
             </a>
 
             <a href="#" class="block bg-cardDark border border-borderDark rounded-xl p-6 card-transition card-green">
-                <svg class="w-8 h-8 mb-4 text-[#3FB950]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
-                <h3 class="text-white text-xl font-semibold mb-2">3. การเชื่อมต่อคลังข้อมูลทางไกล</h3>
-                <p class="text-[#8B949E] text-sm">ปฏิบัติการฝากโปรเจกต์ไว้บนระบบคลาวด์ (Remote Repository) ผ่าน GitHub และการซิงโครไนซ์ข้อมูล (Push, Pull, Clone)</p>
+                <svg class="w-8 h-8 mb-4 text-[#3FB950]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="5" r="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <circle cx="6" cy="17" r="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <circle cx="18" cy="17" r="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v4m0 2v4m0 0l-4-4m4 4l4-4"/>
+                </svg>
+                <h3 class="text-white text-xl font-semibold mb-2">3. การบริหารจัดการสาขา (Branching)</h3>
+                <p class="text-[#8B949E] text-sm">หลักการแยกพื้นที่พัฒนา (Branch) เพื่อลดข้อผิดพลาด และแนวทางการปฏิบัติงานร่วมกันเป็นทีมอย่างปลอดภัย</p>
             </a>
 
             <a href="#" class="block bg-cardDark border border-borderDark rounded-xl p-6 card-transition card-purple">
-                <svg class="w-8 h-8 mb-4 text-[#8957E5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                <h3 class="text-white text-xl font-semibold mb-2">4. การจัดการข้อขัดแย้งขั้นสูง</h3>
+                <svg class="w-8 h-8 mb-4 text-[#8957E5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12.55a7 7 0 0114 0m-2.5 0a4.5 4.5 0 00-9 0m-2.5 0A2 2 0 019 12.55"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16.5v.01"/></svg>
+                <h3 class="text-white text-xl font-semibold mb-2">4. การเชื่อมต่อคลังข้อมูลทางไกล</h3>
+                <p class="text-[#8B949E] text-sm">ปฏิบัติการฝากโปรเจกต์ไว้บนระบบคลาวด์ (Remote Repository) ผ่าน GitHub และการซิงโครไนซ์ข้อมูล (Push, Pull, Clone)</p>
+            </a>
+
+            <a href="#" class="block bg-cardDark border border-borderDark rounded-xl p-6 card-transition card-gray">
+                <svg class="w-8 h-8 mb-4 text-[#8B949E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 6c2 2 4 4 6 4s4-2 6-4"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 18c2-2 4-4 6-4s4 2 6 4"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9c2 2 4 2 6 0"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 15c2-2 4-2 6 0"/></svg>
+                <h3 class="text-white text-xl font-semibold mb-2">5. แก้ข้อขัดแย้งตอนรวมโค้ด</h3>
                 <p class="text-[#8B949E] text-sm">การแก้ไขปัญหาเมื่อไฟล์มีการทับซ้อนกัน (Merge Conflict) และเทคนิคการย้อนสถานะไฟล์โค้ด (Reset / Revert)</p>
             </a>
 

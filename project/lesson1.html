@@ -3,119 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>บทที่ 1: ปัญหาของการจัดการไฟล์แบบเดิม - GitDev.TH</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GitDev.TH - บทที่ 1: ปัญหาของการจัดการไฟล์แบบเดิม</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#0D1117',
+                        textLight: '#C9D1D9',
+                        cardDark: '#161B22',
+                        borderDark: '#30363D',
+                        dangerText: '#FF7B72',
+                        dangerBg: 'rgba(255, 123, 114, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="" rel="stylesheet">
     <style>
-        /* เพิ่ม CSS เฉพาะหน้าบทเรียนเล็กน้อย เพื่อจัดระเบียบเนื้อหา */
-        .lesson-container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .lesson-header {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #30363D;
-            padding-bottom: 20px;
-        }
-        .lesson-header h1 {
-            color: #58A6FF;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        .back-link {
-            color: #8B949E;
-            text-decoration: none;
-            font-size: 16px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        .back-link:hover {
-            color: #FFFFFF;
-        }
-        .lesson-content h3 {
-            color: #ff7f50;
-            margin-top: 40px;
-        }
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #30363D;
-        }
-        .btn-secondary {
-            background-color: #21262D;
-            color: #C9D1D9;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 8px;
-            border: 1px solid #30363D;
-            transition: background-color 0.3s;
-        }
-        .btn-secondary:hover {
-            background-color: #30363D;
-            color: #FFFFFF;
-        }
+        body { font-family: 'Kanit', sans-serif; }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.02); }
     </style>
 </head>
-<body>
+<body class="bg-bgDark text-textLight min-h-screen flex flex-col">
 
-    <header>
-        <div class="logo">GitDev.TH</div>
-        <div class="nav-links">
-            <a href="index.html">หน้าแรก</a>
-            <a href="#">เข้าสู่บทเรียน</a>
-            <a href="#">สรุปคำสั่ง</a>
-            <a href="#">ผู้จัดทำ</a>
+    <nav class="border-b border-borderDark bg-bgDark/90 sticky top-0 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">
+                GitDev.TH
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm">
+                <a href="home.html" class="hover:text-white transition">หน้าแรก</a>
+                <a href="#" class="text-[#58A6FF] font-medium">เข้าสู่บทเรียน</a>
+                <a href="#" class="hover:text-white transition">สรุปคำสั่ง</a>
+                <a href="#" class="hover:text-white transition">ผู้จัดทำ</a>
+            </div>
         </div>
+    </nav>
+
+    <header class="max-w-5xl mx-auto w-full px-6 pt-16 pb-12 text-center border-b border-borderDark/50">
+        <h1 class="text-3xl md:text-4xl font-bold text-[#58A6FF] mb-4">
+            บทที่ 1: ปัญหาของการจัดการไฟล์แบบเดิม
+        </h1>
+        <p class="text-[#8B949E] text-lg max-w-2xl mx-auto">
+            ทำความเข้าใจข้อจำกัดของการจัดการไฟล์โดยไม่ใช้ระบบควบคุมเวอร์ชัน (Version Control System) ก่อนที่เราจะไปเรียนรู้วิธีแก้ปัญหาด้วย Git
+        </p>
     </header>
 
-    <div class="lesson-container">
-        
-        <a href="index.html" class="back-link">⬅ กลับสู่หน้าหลัก</a>
+    <main class="max-w-5xl mx-auto w-full px-6 py-12 flex-grow space-y-20">
 
-        <div class="lesson-header">
-            <h1>บทที่ 1: ปัญหาของการจัดการไฟล์แบบเดิม</h1>
-            <p style="color: #8B949E;">ทำความเข้าใจข้อจำกัดของการจัดการไฟล์โดยไม่ใช้ระบบควบคุมเวอร์ชัน (Version Control System)</p>
-        </div>
-
-        <div class="lesson-content">
+        <section class="flex flex-col md:flex-row items-center gap-10 hover-scale">
+            <div class="w-full md:w-1/2 rounded-2xl overflow-hidden border border-borderDark shadow-2xl relative group">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
+                <img src="les1.1.png" alt="ปัญหาการก๊อปปี้ไฟล์" class="w-full h-[300px] object-cover">
+            </div>
             
-            <div class="card" style="margin-bottom: 20px;">
-                <h3>1. การจัดเก็บแฟ้มข้อมูลที่ซ้ำซ้อนและสิ้นเปลืองพื้นที่</h3>
-                <p>ในการพัฒนาโครงงานหรือเขียนโปรแกรมโดยทั่วไป นักพัฒนามักจะสำรองข้อมูลด้วยการคัดลอกแฟ้มข้อมูล (Copy Folder) และเปลี่ยนชื่อไปเรื่อยๆ เช่น <code>Project_Final</code>, <code>Project_Final_v2</code> หรือ <code>Project_ส่งจริง</code> </p>
-                <p><strong>ปัญหาที่พบ:</strong> วิธีการนี้ทำให้เกิดความสับสนเมื่อเวลาผ่านไป และสิ้นเปลืองพื้นที่จัดเก็บข้อมูลในหน่วยความจำอย่างมหาศาล อีกทั้งยังยากต่อการค้นหาว่าแต่ละแฟ้มข้อมูลมีการเปลี่ยนแปลงรหัสต้นฉบับ (Source Code) ในส่วนใดบ้าง</p>
+            <div class="w-full md:w-1/2 space-y-4">
+                <div class="inline-block bg-[#F0883E]/20 text-[#F0883E] px-3 py-1 rounded-full text-sm font-semibold mb-2">
+                    ปัญหาที่ 1
+                </div>
+                <h2 class="text-2xl font-bold text-white">การจัดเก็บแฟ้มข้อมูลที่ซ้ำซ้อนและสิ้นเปลืองพื้นที่</h2>
+                <p class="text-[#8B949E] leading-relaxed">
+                    ในการพัฒนาโครงงานหรือเขียนโปรแกรมโดยทั่วไป นักพัฒนามักจะสำรองข้อมูลด้วยการคัดลอกแฟ้มข้อมูล (Copy Folder) และเปลี่ยนชื่อไปเรื่อยๆ เช่น <code class="bg-[#21262D] px-1.5 py-0.5 rounded text-white text-sm">Project_Final</code>, <code class="bg-[#21262D] px-1.5 py-0.5 rounded text-white text-sm">Project_Final_v2</code> หรือ <code class="bg-[#21262D] px-1.5 py-0.5 rounded text-white text-sm">Project_ส่งจริง</code>
+                </p>
+                <div class="bg-dangerBg border-l-4 border-dangerText p-4 rounded-r-lg mt-4">
+                    <strong class="text-dangerText block mb-1">ปัญหาที่พบ:</strong>
+                    <p class="text-sm text-[#C9D1D9]">วิธีการนี้ทำให้เกิดความสับสนเมื่อเวลาผ่านไป และสิ้นเปลืองพื้นที่จัดเก็บข้อมูลในหน่วยความจำอย่างมหาศาล อีกทั้งยังยากต่อการค้นหาว่าแต่ละแฟ้มข้อมูลมีการเปลี่ยนแปลงรหัสต้นฉบับ (Source Code) ในส่วนใดบ้าง</p>
+                </div>
             </div>
+        </section>
 
-            <div class="card" style="margin-bottom: 20px;">
-                <h3>2. ข้อจำกัดในการทำงานร่วมกันเป็นทีม (Collaboration)</h3>
-                <p>เมื่อต้องทำงานร่วมกันหลายคน การแบ่งงานและนำแฟ้มข้อมูลมารวมกันด้วยวิธีการส่งผ่าน Flash Drive หรือแอปพลิเคชันสนทนา มักก่อให้เกิดปัญหา <strong>"การเขียนข้อมูลทับกัน" (Overwriting)</strong></p>
-                <p><strong>ปัญหาที่พบ:</strong> หากสมาชิกสองคนแก้ไขไฟล์เดียวกันพร้อมกัน เมื่อนำมารวมกัน งานของคนใดคนหนึ่งอาจถูกลบทิ้งไปโดยไม่ตั้งใจ ทำให้ต้องเสียเวลาเริ่มต้นเขียนรหัสต้นฉบับใหม่ทั้งหมด</p>
+        <section class="flex flex-col md:flex-row-reverse items-center gap-10 hover-scale">
+            <div class="w-full md:w-1/2 rounded-2xl overflow-hidden border border-borderDark shadow-2xl relative group">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
+                <img src="les1.1.png" alt="ปัญหาการทำงานเป็นทีม" class="w-full h-[300px] object-cover">
             </div>
-
-            <div class="card" style="margin-bottom: 20px;">
-                <h3>3. การสูญหายของข้อมูลและการย้อนกลับ (Rollback) ที่ทำได้ยาก</h3>
-                <p>ในกรณีที่นักพัฒนาทำการแก้ไขรหัสต้นฉบับจนระบบเกิดข้อผิดพลาดร้ายแรง (System Crash) หรือเผลอลบไฟล์สำคัญทิ้ง การกดปุ่ม Undo (Ctrl+Z) อาจไม่เพียงพอที่จะกู้คืนสถานะเดิมของโปรเจคกลับมาได้</p>
-                <p><strong>ปัญหาที่พบ:</strong> ขาดระบบบันทึกประวัติการทำงาน (History Tracking) ที่น่าเชื่อถือ ทำให้ไม่สามารถย้อนเวลาไฟล์กลับไปยังจุดที่โปรแกรมยังทำงานได้อย่างสมบูรณ์</p>
+            
+            <div class="w-full md:w-1/2 space-y-4">
+                <div class="inline-block bg-[#F0883E]/20 text-[#F0883E] px-3 py-1 rounded-full text-sm font-semibold mb-2">
+                    ปัญหาที่ 2
+                </div>
+                <h2 class="text-2xl font-bold text-white">ข้อจำกัดในการทำงานร่วมกันเป็นทีม (Collaboration)</h2>
+                <p class="text-[#8B949E] leading-relaxed">
+                    เมื่อต้องทำงานร่วมกันหลายคน การแบ่งงานและนำแฟ้มข้อมูลมารวมกันด้วยวิธีการส่งผ่าน Flash Drive หรือแอปพลิเคชันสนทนา มักก่อให้เกิดปัญหา <span class="text-white font-semibold">"การเขียนข้อมูลทับกัน" (Overwriting)</span>
+                </p>
+                <div class="bg-dangerBg border-l-4 border-dangerText p-4 rounded-r-lg mt-4">
+                    <strong class="text-dangerText block mb-1">ปัญหาที่พบ:</strong>
+                    <p class="text-sm text-[#C9D1D9]">หากสมาชิกสองคนแก้ไขไฟล์เดียวกันพร้อมกัน เมื่อนำมารวมกัน งานของคนใดคนหนึ่งอาจถูกลบทิ้งไปโดยไม่ตั้งใจ ทำให้ต้องเสียเวลาเริ่มต้นเขียนรหัสต้นฉบับใหม่ทั้งหมด</p>
+                </div>
             </div>
+        </section>
 
-            <div class="card" style="background-color: #1c2128; border-color: #2EA043;">
-                <h3 style="color: #2EA043;">บทสรุป: ทำไมเราจึงต้องใช้ Git?</h3>
-                <p>ปัญหาทั้งหมดที่กล่าวมาสามารถแก้ไขได้อย่างเป็นระบบด้วย <strong>Git (Version Control System)</strong> ซึ่งเปรียบเสมือน "ระบบไทม์แมชชีน" ที่คอยบันทึกทุกการเปลี่ยนแปลงของไฟล์ ทำให้เราสามารถทำงานร่วมกันเป็นทีมได้อย่างปลอดภัย ประหยัดพื้นที่ และสามารถย้อนกลับไปดูหรือกู้คืนรหัสต้นฉบับในอดีตได้ตลอดเวลา</p>
-            </div>
+    </main>
 
-        </div>
-
-        <div class="nav-buttons">
-            <a href="index.html" class="btn-secondary">⬅ กลับสู่หน้าหลัก</a>
-            <a href="lesson2.html" class="btn-primary">บทต่อไป: โครงสร้างการทำงานของ Git ➡</a>
-        </div>
-
+    <div class="max-w-5xl mx-auto w-full px-6 pb-20 flex justify-end">
+        <a href="#" class="flex items-center gap-2 bg-[#238636] hover:bg-[#2EA043] text-white font-semibold py-3 px-6 rounded-lg transition shadow-lg">
+            ไปสู่บทที่ 2: เริ่มต้นใช้ Git
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
     </div>
-
-    <footer style="text-align: center; padding: 40px; border-top: 1px solid #30363D; margin-top: 40px; color: #8B949E; background-color: #0D1117;">
-        <p>© 2026 GitDev.TH - จัดทำโดยนักศึกษา ปวช./ปวส. สาขาเทคโนโลยีสารสนเทศ</p>
-    </footer>
 
 </body>
 </html>

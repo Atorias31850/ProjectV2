@@ -53,6 +53,16 @@
         </div>
       </div>
 
+      <div class="info-box note">
+        <div class="box-title">หัวข้อที่คลิปควรอธิบาย</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;">
+          <li>1. GitHub คืออะไร และต่างจาก Git อย่างไร</li>
+          <li>2. วิธีสร้าง Repository ใหม่บน GitHub</li>
+          <li>3. วิธีเชื่อม local repository กับ GitHub ด้วย remote origin</li>
+          <li>4. วิธี clone, fork และเปิด Pull Request เพื่อทำงานร่วมกับคนอื่น</li>
+        </ul>
+      </div>
+
       <h2 class="section-title">สร้าง Repository บน GitHub</h2>
       <ol class="steps">
         <li>
@@ -82,6 +92,35 @@
       </ol>
 
       <h2 class="section-title">เชื่อมต่อ Local กับ GitHub (Remote)</h2>
+      <div class="prose">
+        <p><strong>Remote</strong> คือที่อยู่ของ repository บนอินเทอร์เน็ต เช่น GitHub ส่วน <strong>origin</strong> คือชื่อ remote หลักที่นิยมใช้กับโปรเจกต์ เมื่อเชื่อมต่อแล้วเราจะใช้ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git push</code> เพื่อส่งโค้ดขึ้น GitHub และใช้ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git pull</code> เพื่อดึงโค้ดล่าสุดกลับมา</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <div>
+            <div class="step-title">คัดลอก URL ของ Repository</div>
+            <div class="step-desc">ในหน้า repo ของ GitHub กดปุ่ม Code แล้วคัดลอก HTTPS URL เช่น <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">https://github.com/username/my-first-repo.git</code></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">เพิ่ม remote origin</div>
+            <div class="step-desc">ใช้คำสั่ง <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git remote add origin URL</code> เพื่อผูก repo ในเครื่องกับ repo บน GitHub</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">ตรวจสอบ remote</div>
+            <div class="step-desc">ใช้ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git remote -v</code> เพื่อดูว่า fetch และ push ชี้ไปยัง URL ที่ถูกต้อง</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">Push โค้ดครั้งแรก</div>
+            <div class="step-desc">ใช้ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git push -u origin main</code> เพื่อส่งโค้ดขึ้น GitHub และตั้งค่า upstream ให้ครั้งต่อไปพิมพ์แค่ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git push</code></div>
+          </div>
+        </li>
+      </ol>
       <div class="code-block">
         <div class="code-header"><span>bash – เชื่อม local repo กับ GitHub</span><button class="code-copy">Copy</button></div>
         <div class="code-body">

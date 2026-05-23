@@ -52,6 +52,16 @@
         </div>
       </div>
 
+      <div class="info-box note">
+        <div class="box-title">หัวข้อที่คลิปควรอธิบาย</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;">
+          <li>1. วิธีดาวน์โหลดและติดตั้ง Git บน Windows, macOS และ Linux</li>
+          <li>2. วิธีตรวจสอบว่า Git ติดตั้งสำเร็จด้วยคำสั่ง <code style="font-family:'JetBrains Mono',monospace;">git --version</code></li>
+          <li>3. วิธีตั้งค่า <code style="font-family:'JetBrains Mono',monospace;">user.name</code> และ <code style="font-family:'JetBrains Mono',monospace;">user.email</code></li>
+          <li>4. วิธีสมัคร GitHub และเชื่อม Git ในเครื่องกับบัญชี GitHub</li>
+        </ul>
+      </div>
+
       <h2 class="section-title">ดาวน์โหลดและติดตั้ง Git</h2>
       <div class="prose">
         <p>ไปที่เว็บไซต์ <a href="https://git-scm.com" target="_blank">git-scm.com</a> แล้วดาวน์โหลดเวอร์ชันที่เหมาะกับระบบปฏิบัติการของคุณ</p>
@@ -74,6 +84,90 @@
           <div style="font-size:0.85rem;color:var(--text-secondary);">ใช้ apt: <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">sudo apt install git</code></div>
         </div>
       </div>
+
+      <h2 class="section-title">ขั้นตอนติดตั้ง Git บน Windows</h2>
+      <ol class="steps">
+        <li>
+          <div>
+            <div class="step-title">ดาวน์โหลด Git for Windows</div>
+            <div class="step-desc">เข้าเว็บ <a href="https://git-scm.com/download/win" target="_blank" style="color:var(--accent-cyan);">git-scm.com/download/win</a> แล้วดาวน์โหลดไฟล์ติดตั้งสำหรับ Windows</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">เปิดไฟล์ติดตั้ง</div>
+            <div class="step-desc">กด Next ตามค่าเริ่มต้นได้เลย แนะนำให้เลือกตัวเลือก Git Bash และ Git from the command line เพื่อใช้คำสั่ง Git ได้จาก Terminal</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">ติดตั้งเสร็จแล้วเปิด Git Bash</div>
+            <div class="step-desc">ค้นหา Git Bash จาก Start Menu แล้วเปิดขึ้นมาเพื่อทดสอบคำสั่ง Git</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">ตรวจสอบเวอร์ชัน</div>
+            <div class="step-desc">พิมพ์ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git --version</code> ถ้ามีเลขเวอร์ชันแสดงว่าใช้งานได้แล้ว</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2 class="section-title">ขั้นตอนติดตั้ง Git บน macOS</h2>
+      <ol class="steps">
+        <li>
+          <div>
+            <div class="step-title">เปิด Terminal</div>
+            <div class="step-desc">เปิดแอป Terminal จาก Launchpad หรือ Spotlight Search</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">ติดตั้งผ่าน Xcode Command Line Tools</div>
+            <div class="step-desc">พิมพ์ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">xcode-select --install</code> แล้วทำตามหน้าต่างติดตั้ง</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">หรือใช้ Homebrew</div>
+            <div class="step-desc">ถ้ามี Homebrew แล้ว สามารถติดตั้งด้วย <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">brew install git</code></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">ตรวจสอบเวอร์ชัน</div>
+            <div class="step-desc">พิมพ์ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git --version</code> เพื่อยืนยันว่าติดตั้งสำเร็จ</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2 class="section-title">ขั้นตอนติดตั้ง Git บน Linux</h2>
+      <ol class="steps">
+        <li>
+          <div>
+            <div class="step-title">เปิด Terminal</div>
+            <div class="step-desc">ใช้ Terminal ของ Linux distribution ที่ใช้งานอยู่ เช่น Ubuntu, Debian, Fedora หรือ Arch</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">ติดตั้งด้วย Package Manager</div>
+            <div class="step-desc">Ubuntu/Debian ใช้ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">sudo apt update</code> แล้วตามด้วย <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">sudo apt install git</code></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">ตัวอย่างคำสั่งสำหรับระบบอื่น</div>
+            <div class="step-desc">Fedora ใช้ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">sudo dnf install git</code> และ Arch ใช้ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">sudo pacman -S git</code></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">ตรวจสอบเวอร์ชัน</div>
+            <div class="step-desc">พิมพ์ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git --version</code> ถ้าเห็นเลขเวอร์ชันแปลว่า Git พร้อมใช้งาน</div>
+          </div>
+        </li>
+      </ol>
 
       <h2 class="section-title">ตรวจสอบการติดตั้ง</h2>
       <div class="code-block">
@@ -140,6 +234,52 @@
       <div class="info-box tip">
         <div class="box-title">💡 เคล็ดลับ</div>
         ใช้อีเมลเดียวกันใน Git config และ GitHub account เพื่อให้ Commit ของคุณแสดงรูปโปรไฟล์ถูกต้อง
+      </div>
+
+      <h2 class="section-title">เชื่อม Git ในเครื่องกับ GitHub</h2>
+      <div class="prose">
+        <p>หลังจากติดตั้ง Git และสมัคร GitHub แล้ว ต้องเชื่อมโปรเจกต์ในเครื่องกับ repository บน GitHub เพื่อให้สามารถ push และ pull โค้ดได้</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <div>
+            <div class="step-title">สร้าง Repository บน GitHub</div>
+            <div class="step-desc">เข้า GitHub แล้วกด New repository ตั้งชื่อโปรเจกต์ เลือก Public หรือ Private จากนั้นกด Create repository</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">เริ่ม Git ในโฟลเดอร์โปรเจกต์</div>
+            <div class="step-desc">เปิด Terminal ในโฟลเดอร์งาน แล้วใช้คำสั่ง <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git init</code></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">เพิ่ม Remote Origin</div>
+            <div class="step-desc">คัดลอก URL ของ repo จาก GitHub แล้วใช้คำสั่ง <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git remote add origin URL_REPO</code></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="step-title">Push ขึ้น GitHub ครั้งแรก</div>
+            <div class="step-desc">ใช้คำสั่ง <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git push -u origin main</code> เพื่อส่งโค้ดขึ้น GitHub และตั้งค่าให้ branch main จำ remote ไว้</div>
+          </div>
+        </li>
+      </ol>
+
+      <div class="code-block">
+        <div class="code-header">
+          <span>bash – ตัวอย่างการเชื่อมโปรเจกต์กับ GitHub</span>
+          <button class="code-copy">Copy</button>
+        </div>
+        <div class="code-body">
+<span class="cmd">git init</span>
+<span class="cmd">git add .</span>
+<span class="cmd">git commit</span> <span class="flag">-m</span> <span class="str">"Initial commit"</span>
+<span class="cmd">git branch</span> <span class="flag">-M</span> main
+<span class="cmd">git remote add</span> origin https://github.com/username/project-name.git
+<span class="cmd">git push</span> <span class="flag">-u</span> origin main
+        </div>
       </div>
 
       <div class="chapter-nav">

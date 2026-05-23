@@ -53,6 +53,22 @@
         </div>
       </div>
 
+      <div class="info-box note">
+        <div class="box-title">หัวข้อที่คลิปควรอธิบาย</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;">
+          <li>1. CLI คืออะไร และทำไม Git ถึงใช้งานผ่านคำสั่งเป็นหลัก</li>
+          <li>2. Workflow จาก Working Directory ไป Staging Area, Local Repo และ Remote</li>
+          <li>3. การใช้คำสั่ง <code style="font-family:'JetBrains Mono',monospace;">git init</code>, <code style="font-family:'JetBrains Mono',monospace;">git add</code>, <code style="font-family:'JetBrains Mono',monospace;">git commit</code>, <code style="font-family:'JetBrains Mono',monospace;">git push</code> และ <code style="font-family:'JetBrains Mono',monospace;">git pull</code></li>
+          <li>4. วิธีอ่านผลลัพธ์จาก Terminal และแก้ปัญหาเบื้องต้น</li>
+        </ul>
+      </div>
+
+      <h2 class="section-title">CLI คืออะไร?</h2>
+      <div class="prose">
+        <p><strong>CLI (Command Line Interface)</strong> คือการสั่งงานคอมพิวเตอร์ด้วยการพิมพ์คำสั่งใน Terminal แทนการคลิกปุ่มบนหน้าจอ Git ใช้ CLI บ่อย เพราะทำงานได้เร็ว ชัดเจน และใช้คำสั่งเดียวกันได้เกือบทุกระบบปฏิบัติการ</p>
+        <p>เวลาใช้ Git ให้คิดเป็นรูปแบบง่าย ๆ คือ พิมพ์คำสั่ง → อ่านผลลัพธ์ → ตัดสินใจขั้นตอนต่อไป เช่น ถ้า <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git status</code> บอกว่ามีไฟล์ยังไม่ถูก track ก็ใช้ <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-cyan);">git add</code> เพื่อเพิ่มไฟล์เข้า Staging Area</p>
+      </div>
+
       <h2 class="section-title">ขั้นตอนการทำงานกับ Git (Workflow)</h2>
       <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin:1.5rem 0;font-size:0.85rem;">
         <div style="background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.3);color:var(--accent-green);padding:0.5rem 1rem;border-radius:8px;font-family:'JetBrains Mono',monospace;">Working Directory</div>

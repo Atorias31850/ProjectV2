@@ -99,9 +99,62 @@ function initTypewriter() {
 }
 
 // ─── INIT ─────────────────────────────────────────
+function initLessonClips() {
+  document.querySelectorAll('.lesson-clip').forEach(clip => {
+    const steps = (clip.getAttribute('data-steps') || '')
+      .split('|')
+      .map(item => item.trim())
+      .filter(Boolean);
+    const duration = Number(clip.getAttribute('data-duration') || 9);
+    const title = clip.querySelector('.clip-heading');
+    const line = clip.querySelector('.clip-line');
+    const button = clip.querySelector('.clip-play');
+    const progress = clip.querySelector('.clip-progress span');
+    const time = clip.querySelector('.clip-time');
+    let timer = null;
+
+    function render(index, elapsed) {
+      const current = steps[index] || steps[0] || '';
+      const parts = current.split('::');
+      if (title) title.textContent = parts[0] || '';
+      if (line) line.textContent = parts[1] || '';
+      if (progress) progress.style.width = `${Math.min(100, (elapsed / duration) * 100)}%`;
+      if (time) time.textContent = `${Math.ceil(Math.max(0, duration - elapsed))}s`;
+    }
+
+    function stop(reset) {
+      if (timer) clearInterval(timer);
+      timer = null;
+      if (button) button.textContent = '▶';
+      if (reset) {
+        if (progress) progress.style.width = '0%';
+        render(0, 0);
+      }
+    }
+
+    if (!steps.length || !button) return;
+    render(0, 0);
+    button.addEventListener('click', () => {
+      if (timer) {
+        stop(false);
+        return;
+      }
+      const startedAt = Date.now();
+      button.textContent = 'Ⅱ';
+      timer = setInterval(() => {
+        const elapsed = Math.min(duration, (Date.now() - startedAt) / 1000);
+        const index = Math.min(steps.length - 1, Math.floor((elapsed / duration) * steps.length));
+        render(index, elapsed);
+        if (elapsed >= duration) stop(true);
+      }, 160);
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initCopyButtons();
   initScrollReveal();
   initTypewriter();
+  initLessonClips();
 });

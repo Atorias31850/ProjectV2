@@ -611,6 +611,106 @@ body::before {
 }
 
 /* ─── COMMAND TABLE ─────────────────────────────── */
+.lesson-clip {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(0,255,136,0.14), transparent 28%),
+    radial-gradient(circle at 82% 20%, rgba(0,212,255,0.12), transparent 30%),
+    linear-gradient(135deg, #07101f 0%, #0d1628 58%, #050912 100%);
+  overflow: hidden;
+}
+.lesson-clip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  pointer-events: none;
+}
+.clip-screen {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.25rem, 5vw, 3rem);
+  min-height: 0;
+}
+.clip-chip {
+  width: fit-content;
+  margin-bottom: 0.85rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(0,255,136,0.35);
+  border-radius: 999px;
+  color: var(--accent-green);
+  background: rgba(0,255,136,0.08);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.62rem, 1.8vw, 0.75rem);
+}
+.clip-heading {
+  max-width: 920px;
+  color: var(--text-primary);
+  font-weight: 800;
+  font-size: clamp(1.25rem, 4vw, 2.6rem);
+  line-height: 1.24;
+  letter-spacing: 0;
+}
+.clip-line {
+  max-width: 820px;
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: clamp(0.86rem, 2.2vw, 1.15rem);
+  line-height: 1.75;
+}
+.clip-controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  border-top: 1px solid rgba(30,58,95,0.8);
+  background: rgba(6,11,20,0.76);
+}
+.clip-play {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(0,255,136,0.45);
+  border-radius: 50%;
+  background: var(--accent-green);
+  color: #06101d;
+  font-weight: 800;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.clip-play:hover { box-shadow: 0 0 24px rgba(0,255,136,0.36); }
+.clip-progress {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(139,163,188,0.22);
+  overflow: hidden;
+}
+.clip-progress span {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+  transition: width 0.18s linear;
+}
+.clip-time {
+  min-width: 48px;
+  color: var(--text-secondary);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  text-align: right;
+}
+
 .cmd-table {
   width: 100%;
   border-collapse: collapse;

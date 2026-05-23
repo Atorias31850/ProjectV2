@@ -554,14 +554,6 @@ body::before {
   border: none;
 }
 .video-wrap video { object-fit: contain; background: #000; }
-.video-wrap .generated-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  display: block;
-  object-fit: cover;
-  background: #060b14;
-}
 
 /* ─── COMMAND TABLE ─────────────────────────────── */
 .cmd-table {
